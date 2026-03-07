@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/Identity/">
+    <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Domain/ProjectHub.Modules.Identity.Domain.csproj" Id="5ffbbe75-ce36-4a7d-9d0d-a0e9dcfc9038" />
+    <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Infrastructure/ProjectHub.Modules.Identity.Infrastructure.csproj" Id="e287f029-7577-4f88-b7fe-3dacccf2c80d" />
+    <Project Path="Modules/Identity/ProjectHub.Modules.Identity/ProjectHub.Modules.Identity.csproj" Id="737630fb-467c-403e-b7b3-8537fcf133b8" />
+  </Folder>
+  <Folder Name="/Modules/Workspaces/">
+    <Project Path="Modules/Workspaces/ProjectHub.Modules.Workspaces.Domain/ProjectHub.Modules.Workspaces.Domain.csproj" Id="996aeb10-6a9f-47dc-8a48-45e1fa3811ca" />
+    <Project Path="Modules/Workspaces/ProjectHub.Modules.Workspaces.Infrastructure/ProjectHub.Modules.Workspaces.Infrastructure.csproj" Id="a72d7bc4-7f11-4b27-b3c0-4f1c7cda3346" />
+    <Project Path="Modules/Workspaces/ProjectHub.Modules.Workspaces/ProjectHub.Modules.Workspaces.csproj" Id="b7a8f149-c01a-4d29-aa59-f11d3aa7b600" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="ProjectHub.API/ProjectHub.API.csproj" />
+</Solution>

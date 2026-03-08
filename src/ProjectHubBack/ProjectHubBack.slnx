@@ -11,6 +11,7 @@
     <Project Path="Modules/Workspaces/ProjectHub.Modules.Workspaces/ProjectHub.Modules.Workspaces.csproj" Id="b7a8f149-c01a-4d29-aa59-f11d3aa7b600" />
   </Folder>
   <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>

@@ -3,5 +3,6 @@
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageVersion Include="SonarAnalyzer.CSharp" Version="10.20.0.135146" />
 	</ItemGroup>
 </Project>

@@ -1,1 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web"></Project>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <PackageReference Include="FastEndpoints" />
+    <PackageReference Include="FastEndpoints.Swagger" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Scalar.AspNetCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\Identity\ProjectHub.Modules.Identity\ProjectHub.Modules.Identity.csproj" />
+    <ProjectReference Include="..\Modules\Workspaces\ProjectHub.Modules.Workspaces\ProjectHub.Modules.Workspaces.csproj" />
+  </ItemGroup>
+</Project>

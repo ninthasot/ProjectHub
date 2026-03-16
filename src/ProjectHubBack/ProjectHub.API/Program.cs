@@ -12,10 +12,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 builder.Services
-    .AddFastEndpoints(o => o.Assemblies = 
+    .AddFastEndpoints(
+        o => o.Assemblies =
         [typeof(ProjectHub.Modules.Identity.IAssemblyReference).Assembly,
-        typeof(ProjectHub.Modules.Workspaces.IAssemblyReference).Assembly
-    ])
+        typeof(ProjectHub.Modules.Workspaces.IAssemblyReference).Assembly])
     .SwaggerDocument();
 
 // Add services to the container.
@@ -35,7 +35,7 @@ app.UseFastEndpoints(config =>
     config.Serializer.Options.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
 });
 
-if(app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     app.UseOpenApi(c => c.Path = "/openapi/{documentName}.json");
     app.MapScalarApiReference(o => o.AddDocument("v1"));

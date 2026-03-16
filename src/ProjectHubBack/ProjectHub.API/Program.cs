@@ -7,18 +7,6 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        options.Authority = "https://your-identity-provider.com"; // Replace with your identity provider
-        options.Audience = "your-api-audience"; // Replace with your API audience
-        
-        // For development/testing only - remove in production
-        options.RequireHttpsMetadata = false;
-        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true
-        };
     });
 
 builder.Services.AddAuthorization();

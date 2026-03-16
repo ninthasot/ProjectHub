@@ -15,7 +15,7 @@ public class RegisterUserEndpoint : Endpoint<RegisterUserRequestDto, RegisterUse
 
     public override async Task HandleAsync(RegisterUserRequestDto req, CancellationToken ct)
     {
-        var command = new CreateUserCommand(req);
+        var command = new RegisterUserCommand(req);
 
         RegisterUserResponseDto response = await command.ExecuteAsync(ct);
 

@@ -8,7 +8,7 @@ public class RegisterUserCommandHandler : CommandHandler<RegisterUserCommand, Re
 
         ThrowError(c => c.Request, "Non");
 
-        await new RegisterUserEvent(response).PublishAsync(Mode.WaitForNone, ct);
+        await new RegisterUserDomainEvent(response).PublishAsync(Mode.WaitForNone, ct);
 
         return response;
     }

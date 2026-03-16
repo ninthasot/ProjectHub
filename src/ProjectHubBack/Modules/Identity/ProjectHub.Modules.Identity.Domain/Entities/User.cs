@@ -1,13 +1,16 @@
-﻿namespace ProjectHub.Modules.Identity.Domain.Entities;
+﻿using ProjectHub.Shared.Abstractions.Domain;
 
-public class User
+namespace ProjectHub.Modules.Identity.Domain.Entities;
+
+public sealed class User : AggregateRoot
 {
-    public Guid Id { get; set; }
     public string Email { get; private set; } = string.Empty;
     public string PasswordHash { get; private set; } = string.Empty;
     public string DisplayName { get; private set; } = string.Empty;
-    public DateTime CreatedAt { get; private init; } = DateTime.UtcNow;
+    public DateTime CreatedAt { get; private init; }
 
+    //Used by EF Core
+    private User() { }
 
     public static User Create(string email, string passwordHash, string displayName) => new()
     {

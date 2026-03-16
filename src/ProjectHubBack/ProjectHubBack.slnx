@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/Identity/">
+    <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Contracts/ProjectHub.Modules.Identity.Contracts.csproj" Id="5ec2d069-b88a-4fdb-bfde-c94f02e1843e" />
     <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Domain/ProjectHub.Modules.Identity.Domain.csproj" Id="5ffbbe75-ce36-4a7d-9d0d-a0e9dcfc9038" />
     <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Infrastructure/ProjectHub.Modules.Identity.Infrastructure.csproj" Id="e287f029-7577-4f88-b7fe-3dacccf2c80d" />
     <Project Path="Modules/Identity/ProjectHub.Modules.Identity/ProjectHub.Modules.Identity.csproj" Id="737630fb-467c-403e-b7b3-8537fcf133b8" />

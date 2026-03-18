@@ -7,7 +7,7 @@ public sealed class User : AggregateRoot
     public string Email { get; private set; } = string.Empty;
     public string PasswordHash { get; private set; } = string.Empty;
     public string DisplayName { get; private set; } = string.Empty;
-    public DateTime CreatedAt { get; private init; }
+    public DateTimeOffset CreatedAt { get; private init; }
 
     //Used by EF Core
     private User() { }
@@ -18,6 +18,6 @@ public sealed class User : AggregateRoot
         Email = email,
         PasswordHash = passwordHash,
         DisplayName = displayName,
-        CreatedAt = DateTime.UtcNow
+        CreatedAt = DateTimeOffset.UtcNow
     };
 }

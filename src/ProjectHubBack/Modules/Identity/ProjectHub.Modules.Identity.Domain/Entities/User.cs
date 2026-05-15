@@ -8,9 +8,7 @@ public sealed class User : AggregateRoot
     public string PasswordHash { get; private set; } = string.Empty;
     public string DisplayName { get; private set; } = string.Empty;
     public DateTimeOffset CreatedAt { get; private init; }
-
-    //Used by EF Core
-    private User() { }
+    public DateTimeOffset? UpdatedAt { get; private set; }
 
     public static User Create(string email, string passwordHash, string displayName) => new()
     {
@@ -20,4 +18,11 @@ public sealed class User : AggregateRoot
         DisplayName = displayName,
         CreatedAt = DateTimeOffset.UtcNow
     };
+
+    public void UpdateProfile(string displayName, string email)
+    {
+        DisplayName = displayName;
+        Email = email;
+        UpdatedAt = DateTimeOffset.UtcNow;
+    }
 }

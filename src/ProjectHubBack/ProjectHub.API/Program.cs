@@ -1,20 +1,20 @@
 using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Scalar.AspNetCore;
+using ProjectHub.Modules.Identity.Infrastructure;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-    });
+builder.Services.AddIdentityModule(builder.Configuration);
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { });
 
 builder.Services.AddAuthorization();
 
 builder.Services
     .AddFastEndpoints(
         o => o.Assemblies =
-        [typeof(ProjectHub.Modules.Identity.IAssemblyReference).Assembly,
+        [typeof(ProjectHub.Modules.Identity.Api.IAssemblyReference).Assembly,
         typeof(ProjectHub.Modules.Workspaces.IAssemblyReference).Assembly])
     .SwaggerDocument();
 

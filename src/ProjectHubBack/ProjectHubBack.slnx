@@ -1,9 +1,10 @@
 <Solution>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/Identity/">
+    <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Api/ProjectHub.Modules.Identity.Api.csproj" Id="d165c024-1bfb-473c-b16c-8240ea1c2372" />
+    <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Application/ProjectHub.Modules.Identity.Application.csproj" Id="d6bdbd20-f77f-4706-a4b8-34f5da25c164" />
     <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Domain/ProjectHub.Modules.Identity.Domain.csproj" Id="5ffbbe75-ce36-4a7d-9d0d-a0e9dcfc9038" />
     <Project Path="Modules/Identity/ProjectHub.Modules.Identity.Infrastructure/ProjectHub.Modules.Identity.Infrastructure.csproj" Id="e287f029-7577-4f88-b7fe-3dacccf2c80d" />
-    <Project Path="Modules/Identity/ProjectHub.Modules.Identity/ProjectHub.Modules.Identity.csproj" Id="737630fb-467c-403e-b7b3-8537fcf133b8" />
   </Folder>
   <Folder Name="/Modules/Shared/">
     <Project Path="Modules/Shared/ProjectHub.Shared.Abstractions/ProjectHub.Shared.Abstractions.csproj" Id="e8447b19-3aaa-49a1-bb14-e1935921939c" />

@@ -1,4 +1,4 @@
-﻿namespace ProjectHub.Modules.Identity.Features.Register;
+﻿namespace ProjectHub.Modules.Identity.Api.EndPoints.Register;
 
 public record RegisterUserResponseDto
 {

@@ -6,7 +6,7 @@
     <PackageReference Include="Scalar.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modules\Identity\ProjectHub.Modules.Identity\ProjectHub.Modules.Identity.csproj" />
+    <ProjectReference Include="..\Modules\Identity\ProjectHub.Modules.Identity.Api\ProjectHub.Modules.Identity.Api.csproj" />
     <ProjectReference Include="..\Modules\Workspaces\ProjectHub.Modules.Workspaces\ProjectHub.Modules.Workspaces.csproj" />
   </ItemGroup>
 </Project>

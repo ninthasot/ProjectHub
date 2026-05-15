@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<PackageReference Include="FastEndpoints" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\ProjectHub.Modules.Identity.Application\ProjectHub.Modules.Identity.Application.csproj" />
+	  <ProjectReference Include="..\ProjectHub.Modules.Identity.Infrastructure\ProjectHub.Modules.Identity.Infrastructure.csproj" />
+	</ItemGroup>
+</Project>

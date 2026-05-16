@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ProjectHub.Modules.Identity.Domain.Interfaces;
 using ProjectHub.Modules.Identity.Infrastructure.Persistence;
-using ProjectHub.Modules.Identity.Infrastructure.Repositories;
+using ProjectHub.Modules.Identity.Infrastructure.Persistence.Repositories;
+using ProjectHub.Modules.Identity.Infrastructure.Security;
 
 namespace ProjectHub.Modules.Identity.Infrastructure;
 
@@ -15,6 +15,7 @@ public static class DependencyInjection
 
 
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
 
         return services;
     }

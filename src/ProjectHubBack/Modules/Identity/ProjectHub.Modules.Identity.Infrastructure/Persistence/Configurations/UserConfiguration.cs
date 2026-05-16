@@ -17,6 +17,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasIndex(u => u.Email)
             .IsUnique();
 
+        builder.Property(u => u.Username)
+            .IsRequired()
+            .HasMaxLength(100);
+
+        builder.HasIndex(u => u.Username)
+            .IsUnique();
+
         builder.Property(u => u.PasswordHash)
             .IsRequired()
             .HasMaxLength(1024);

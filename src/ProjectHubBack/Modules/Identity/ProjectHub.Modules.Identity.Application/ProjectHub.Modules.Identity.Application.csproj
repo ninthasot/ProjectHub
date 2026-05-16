@@ -2,5 +2,8 @@
 	<ItemGroup>
 		<PackageReference Include="FastEndpoints" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\ProjectHub.Modules.Identity.Domain\ProjectHub.Modules.Identity.Domain.csproj" />
+	</ItemGroup>
 </Project>
 

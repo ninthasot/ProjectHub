@@ -7,6 +7,7 @@ public class RegisterUserEndpoint : Endpoint<RegisterUserRequestDto, Guid>
     public override void Configure()
     {
         Post("/users");
+        AllowAnonymous();
         Summary(s =>
         {
             s.Summary = "Create a new user";
@@ -17,7 +18,7 @@ public class RegisterUserEndpoint : Endpoint<RegisterUserRequestDto, Guid>
 
     public override async Task HandleAsync(RegisterUserRequestDto req, CancellationToken ct)
     {
-        var command = new RegisterUserCommand(req.Username, req.Email, req.Password);
+        var command = new RegisterUserCommand(req.Email, req.Username, req.Password, req.DisplayName);
 
         Guid response = await command.ExecuteAsync(ct);
 

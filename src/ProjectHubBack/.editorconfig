@@ -280,3 +280,7 @@ dotnet_diagnostic.CA2327.severity = none
 
 # IDE0046: Convert to conditional expression
 dotnet_diagnostic.IDE0046.severity = none
+
+#Prevent migration analysis
+[**/Migrations/*.cs]
+dotnet_analyzer_diagnostic.severity = none

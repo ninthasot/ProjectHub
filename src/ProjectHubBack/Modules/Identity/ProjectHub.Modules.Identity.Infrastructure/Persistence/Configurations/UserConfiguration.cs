@@ -6,7 +6,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.ToTable("users", "identity");
+        builder.ToTable(IdentityInfrastructureConstants.Tables.Users, IdentityInfrastructureConstants.SchemaName);
 
         builder.HasKey(u => u.Id);
 

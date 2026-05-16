@@ -19,6 +19,7 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
     <File Path="docker-compose.yml" />
+    <File Path="readme.md" />
   </Folder>
   <Project Path="ProjectHub.API/ProjectHub.API.csproj" />
 </Solution>

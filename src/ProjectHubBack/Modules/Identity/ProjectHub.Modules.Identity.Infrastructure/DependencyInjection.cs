@@ -11,7 +11,8 @@ public static class DependencyInjection
     public static IServiceCollection AddIdentityModule(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<IdentityDbContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsHistoryTable("__EFMigrationsHistory", IdentityInfrastructureConstants.SchemaName)));
+
 
         services.AddScoped<IUserRepository, UserRepository>();
 

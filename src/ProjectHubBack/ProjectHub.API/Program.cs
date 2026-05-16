@@ -1,7 +1,8 @@
 using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Scalar.AspNetCore;
+using ProjectHub.API.ExceptionHandlers;
 using ProjectHub.Modules.Identity.Infrastructure;
+using Scalar.AspNetCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,9 @@ builder.Services
         [typeof(ProjectHub.Modules.Identity.Api.IAssemblyReference).Assembly,
         typeof(ProjectHub.Modules.Workspaces.IAssemblyReference).Assembly])
     .SwaggerDocument();
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 // Add services to the container.
 

@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ProjectHub.Modules.Identity.Infrastructure.Persistence;
 using ProjectHub.Modules.Identity.Infrastructure.Persistence.Repositories;
 using ProjectHub.Modules.Identity.Infrastructure.Security;
+using ProjectHub.Modules.Identity.Infrastructure.Settings;
 
 namespace ProjectHub.Modules.Identity.Infrastructure;
 
@@ -16,6 +17,12 @@ public static class DependencyInjection
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IPasswordHasher, PasswordHasher>();
+        services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+
+        services.AddOptions<JwtSettings>()
+            .Bind(configuration.GetSection(JwtSettings.SectionName))
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
 
         return services;
     }

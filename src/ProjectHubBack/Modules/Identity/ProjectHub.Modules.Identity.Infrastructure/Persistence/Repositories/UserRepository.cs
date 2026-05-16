@@ -22,4 +22,10 @@ public class UserRepository(IdentityDbContext context) : IUserRepository
         bool exists = await context.Users.AnyAsync(u => u.Username == username, ct);
         return exists;
     }
+
+    public async Task<User?> GetByUsernameAsync(string username, CancellationToken ct)
+    {
+        User? user = await context.Users.FirstOrDefaultAsync(u => u.Username == username, ct);
+        return user;
+    }
 }

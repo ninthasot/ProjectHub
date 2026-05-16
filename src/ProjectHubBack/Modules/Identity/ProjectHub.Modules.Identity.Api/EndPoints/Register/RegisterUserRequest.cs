@@ -1,6 +1,6 @@
 ﻿namespace ProjectHub.Modules.Identity.Api.EndPoints.Register;
 
-public record RegisterUserRequestDto
+public record RegisterUserRequest
 {
     public required string Email { get; set; }
     public required string Username { get; set; }

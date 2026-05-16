@@ -17,7 +17,17 @@ builder.Services
         o => o.Assemblies =
         [typeof(ProjectHub.Modules.Identity.Api.IAssemblyReference).Assembly,
         typeof(ProjectHub.Modules.Workspaces.IAssemblyReference).Assembly])
-    .SwaggerDocument();
+    .SwaggerDocument(o =>
+    {
+        o.DocumentSettings = s =>
+        {
+            s.DocumentName = "v1";
+            s.Title = "ProjectHub API";
+            s.Version = "v1";
+        };
+        o.MaxEndpointVersion = 1;
+        o.ShortSchemaNames = true;
+    });
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
@@ -37,6 +47,7 @@ app.UseFastEndpoints(config =>
 {
     config.Endpoints.RoutePrefix = "api";
     config.Serializer.Options.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    config.Versioning.Prefix = "v";
 });
 
 if (app.Environment.IsDevelopment())

@@ -8,6 +8,7 @@ public class RegisterUserEndpoint : Endpoint<RegisterUserRequest, RegisterUserRe
     {
         Post("/users");
         AllowAnonymous();
+        Version(1);
         Summary(s =>
         {
             s.Summary = "Create a new user";

@@ -8,6 +8,7 @@ public class LoginUserEndpoint : Endpoint<LoginUserRequest, LoginUserResponse>
     {
         Post("/login");
         AllowAnonymous();
+        Version(1);
         Summary(s =>
         {
             s.Summary = "Login a user";

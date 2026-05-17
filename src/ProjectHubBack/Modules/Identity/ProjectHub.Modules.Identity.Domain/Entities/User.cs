@@ -2,7 +2,7 @@
 
 namespace ProjectHub.Modules.Identity.Domain.Entities;
 
-public sealed class User : AggregateRoot
+public sealed class User : AggregateRoot<Guid>
 {
     public string Email { get; private set; } = string.Empty;
     public string Username { get; private set; } = string.Empty;

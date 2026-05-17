@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectHub.Modules.Workspaces.Domain\ProjectHub.Modules.Workspaces.Domain.csproj" />
+  </ItemGroup>
+</Project>

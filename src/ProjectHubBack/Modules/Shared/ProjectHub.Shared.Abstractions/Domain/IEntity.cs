@@ -1,5 +1,6 @@
 ﻿namespace ProjectHub.Shared.Abstractions.Domain;
 
-public abstract class AggregateRoot<TId> : Entity<TId>
+public interface IEntity<TId>
 {
+    TId Id { get; set; }
 }

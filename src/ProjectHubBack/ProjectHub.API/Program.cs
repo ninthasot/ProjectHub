@@ -16,7 +16,7 @@ builder.Services
     .AddFastEndpoints(
         o => o.Assemblies =
         [typeof(ProjectHub.Modules.Identity.Api.IAssemblyReference).Assembly,
-        typeof(ProjectHub.Modules.Workspaces.IAssemblyReference).Assembly])
+        typeof(ProjectHub.Modules.Workspaces.Api.IAssemblyReference).Assembly])
     .SwaggerDocument(o =>
     {
         o.DocumentSettings = s =>

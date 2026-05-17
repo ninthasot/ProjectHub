@@ -1,6 +1,6 @@
 ﻿namespace ProjectHub.Shared.Abstractions.Domain;
 
-public abstract class Entity
+public abstract class Entity<TId> : IEntity<TId>
 {
-    public Guid Id { get; protected init; }
+    public required TId Id { get; set; }
 }

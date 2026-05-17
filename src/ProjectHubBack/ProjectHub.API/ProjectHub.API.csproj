@@ -13,6 +13,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modules\Identity\ProjectHub.Modules.Identity.Api\ProjectHub.Modules.Identity.Api.csproj" />
-    <ProjectReference Include="..\Modules\Workspaces\ProjectHub.Modules.Workspaces\ProjectHub.Modules.Workspaces.csproj" />
+    <ProjectReference Include="..\Modules\Workspaces\ProjectHub.Modules.Workspaces.Api\ProjectHub.Modules.Workspaces.Api.csproj" />
   </ItemGroup>
 </Project>

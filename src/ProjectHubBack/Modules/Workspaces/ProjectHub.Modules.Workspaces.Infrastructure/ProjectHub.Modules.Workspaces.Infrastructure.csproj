@@ -5,4 +5,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Identity\ProjectHub.Modules.Identity.Application\ProjectHub.Modules.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\Identity\ProjectHub.Modules.Identity.Domain\ProjectHub.Modules.Identity.Domain.csproj" />
+  </ItemGroup>
 </Project>

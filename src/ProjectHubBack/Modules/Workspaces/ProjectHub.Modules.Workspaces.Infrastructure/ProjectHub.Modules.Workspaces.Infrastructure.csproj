@@ -4,9 +4,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Identity\ProjectHub.Modules.Identity.Application\ProjectHub.Modules.Identity.Application.csproj" />
-    <ProjectReference Include="..\..\Identity\ProjectHub.Modules.Identity.Domain\ProjectHub.Modules.Identity.Domain.csproj" />
+    <ProjectReference Include="..\ProjectHub.Modules.Workspaces.Application\ProjectHub.Modules.Workspaces.Application.csproj" />
+    <ProjectReference Include="..\ProjectHub.Modules.Workspaces.Domain\ProjectHub.Modules.Workspaces.Domain.csproj" />
   </ItemGroup>
 </Project>

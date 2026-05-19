@@ -2,11 +2,13 @@ using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using ProjectHub.API.ExceptionHandlers;
 using ProjectHub.Modules.Identity.Infrastructure;
+using ProjectHub.Modules.Workspaces.Infrastructure;
 using Scalar.AspNetCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddIdentityModule(builder.Configuration);
+builder.Services.AddWorkspaceModule(builder.Configuration);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { });
 

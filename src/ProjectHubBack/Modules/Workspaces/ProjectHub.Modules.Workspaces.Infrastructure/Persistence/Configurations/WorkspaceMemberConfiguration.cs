@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace ProjectHub.Modules.Workspaces.Infrastructure.Persistence.Configurations;
+﻿namespace ProjectHub.Modules.Workspaces.Infrastructure.Persistence.Configurations;
 
 public class WorkspaceMemberConfiguration : IEntityTypeConfiguration<WorkspaceMember>
 {
@@ -23,8 +21,5 @@ public class WorkspaceMemberConfiguration : IEntityTypeConfiguration<WorkspaceMe
 
         builder.Property(m => m.JoinedAt)
             .IsRequired();
-
-        builder.HasIndex(m => new { m.WorkspaceId, m.UserId })
-            .IsUnique();
     }
 }

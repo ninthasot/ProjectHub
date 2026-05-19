@@ -32,11 +32,5 @@ public class WorkspaceConfiguration : IEntityTypeConfiguration<Workspace>
             .WithOne()
             .HasForeignKey(i => i.WorkspaceId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        builder.Navigation(w => w.Members)
-            .HasField("_members");
-
-        builder.Navigation(w => w.Invitations)
-            .HasField("_invitations");
     }
 }

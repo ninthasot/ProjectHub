@@ -30,8 +30,5 @@ public class InvitationConfiguration : IEntityTypeConfiguration<Invitation>
             .IsRequired();
 
         builder.Property(i => i.RespondedAt);
-
-        builder.HasIndex(i => new { i.WorkspaceId, i.InviteeEmail })
-            .IsUnique();
     }
 }

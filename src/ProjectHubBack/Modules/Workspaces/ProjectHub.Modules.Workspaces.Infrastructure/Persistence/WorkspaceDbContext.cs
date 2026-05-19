@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ProjectHub.Modules.Workspaces.Domain.Entities;
-
-namespace ProjectHub.Modules.Workspaces.Infrastructure.Persistence;
+﻿namespace ProjectHub.Modules.Workspaces.Infrastructure.Persistence;
 
 public class WorkspaceDbContext : DbContext
 {
